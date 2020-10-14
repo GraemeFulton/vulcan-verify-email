@@ -1,5 +1,12 @@
 # Vulcan Verify Email
-A vulcan package that handles email verification
+A vulcan package that handles email verification.
+
+This package is a combination of 2 parts of vulcan that already exist.
+
+1. The server side part is here: https://github.com/VulcanJS/Vulcan/blob/devel/packages/vulcan-users/lib/server/AuthPassword.js#L302
+2. The client side part is here: https://github.com/VulcanJS/Vulcan/blob/cdb0d7da18e59395b56239f3c1d41bcd301eb155/packages/vulcan-accounts/imports/ui/components/VerifyEmail.jsx
+
+By making it a standalone package, it gives more control of the verification mutation in your own app. For example, you could modify it to add users to a new group. Details on that below:
 
 ## How it works
 
