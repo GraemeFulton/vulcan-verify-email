@@ -1,6 +1,22 @@
 # Vulcan Verify Email
 A vulcan package that handles email verification
 
+---
+Updates on this branch:
+
+adds user to a verifiedEmail group, so you can check easily in Vulcan apps if the user email is indeed verified. Without this, it looks like you have to mess around with Meteor to check if the user is verified (user.emails[0].verified; ), like this:
+const user = await Meteor.users.findOne({ _id: userId });
+
+const verified = user.emails[0].verified;
+        if (verified) {
+          await addUserToGroup(user)
+          return 2
+        }
+
+Added a resendVerification graphql endpoint thing. If the link has expired, this can be use to trigger a new email verification sent to them. (this is used in my updated VerifyEmail component)
+
+If the current logged in user has already verified their email, the component will add the user to the verifiedEmail group automatically
+
 ## How it works
 
 Install this package like other vulcan packages. Once it's installed, it'll send an email verification email to new members that sign up.
