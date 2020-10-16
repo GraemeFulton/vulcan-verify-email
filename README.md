@@ -17,7 +17,8 @@ Added a resendVerification graphql endpoint thing. If the link has expired, this
 
 If the current logged in user has already verified their email, the component will add the user to the verifiedEmail group automatically
 
-There's some parts of it that are tied to my app, like tailwind.css and my header component, so just added it as a new branch for now (edited) 
+There's some parts of it that are tied to my app, like tailwind.css and my header component, so just added it as a new branch for now (edited)
+
 ---
 ## How it works
 
